@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @benefit.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @benefit.description %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @benefit.active %>
+</p>
+
+<p>
+  <strong>image:</strong><br>
+  <%= image_tag @benefit.image, width: '500' if @benefit.image.attached? %>
+</p>
+
+<%= link_to 'Edit', edit_benefit_path(@benefit) %> |
+<%= link_to 'Back', benefits_path %>
